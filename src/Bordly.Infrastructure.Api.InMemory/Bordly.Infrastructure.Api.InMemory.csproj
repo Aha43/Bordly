@@ -4,6 +4,12 @@
     <TargetFramework>net7.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+	<WarningsAsErrors>Nullable</WarningsAsErrors>
   </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Bordly.Domain\Bordly.Domain.csproj" />
+    <ProjectReference Include="..\Bordly.Specification\Bordly.Specification.csproj" />
+  </ItemGroup>
 
 </Project>
