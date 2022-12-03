@@ -57,7 +57,7 @@ public class InMemoryGameApi : IGameApi
             var sb = new StringBuilder();
             for (var i = 0; i < game.Word.Length; i++)
             {
-                if (param.Letters[i] == game.Word[i])
+                if (Char.ToLower(param.Letters[i]) == game.Word[i])
                 {
                     sb.Append('c');
                 }
