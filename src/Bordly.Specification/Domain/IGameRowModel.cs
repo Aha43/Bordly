@@ -2,7 +2,6 @@
 {
     public interface IGameRowModel
     {
-        string Letters { get; }
         string Statuses { get; }
     }
 }

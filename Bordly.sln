@@ -5,21 +5,22 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{7A340F41-0DB8-44C8-A0FA-E7C389AF975F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bordly.Business", "src\Bordly.Business\Bordly.Business.csproj", "{CCC2DAB6-E6CC-4D26-9779-CC27CE98D48A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bordly.Business", "src\Bordly.Business\Bordly.Business.csproj", "{CCC2DAB6-E6CC-4D26-9779-CC27CE98D48A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bordly.Specification", "src\Bordly.Specification\Bordly.Specification.csproj", "{BC9E663E-8D24-42E8-AFFA-257AC1B0A5C7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bordly.Specification", "src\Bordly.Specification\Bordly.Specification.csproj", "{BC9E663E-8D24-42E8-AFFA-257AC1B0A5C7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bordly.Domain", "src\Bordly.Domain\Bordly.Domain.csproj", "{30118942-8BD9-4E4E-8942-143802D3BE6D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bordly.Domain", "src\Bordly.Domain\Bordly.Domain.csproj", "{30118942-8BD9-4E4E-8942-143802D3BE6D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bordly.Infrastructure.Api.InMemory", "src\Bordly.Infrastructure.Api.InMemory\Bordly.Infrastructure.Api.InMemory.csproj", "{94458D74-ECD6-4B8A-B803-544CC94B8D8F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bordly.Infrastructure.Api.InMemory", "src\Bordly.Infrastructure.Api.InMemory\Bordly.Infrastructure.Api.InMemory.csproj", "{94458D74-ECD6-4B8A-B803-544CC94B8D8F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bordly.Infrastructure.Api.Test", "src\Bordly.Infrastructure.Api.Test\Bordly.Infrastructure.Api.Test.csproj", "{82F0F6AA-451B-467F-ADD1-636DCB8B52F6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{DF4F0A8F-E4DE-4B2C-B063-C1B806EE92A5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{CCC2DAB6-E6CC-4D26-9779-CC27CE98D48A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -38,11 +39,23 @@ Global
 		{94458D74-ECD6-4B8A-B803-544CC94B8D8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{94458D74-ECD6-4B8A-B803-544CC94B8D8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{94458D74-ECD6-4B8A-B803-544CC94B8D8F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{82F0F6AA-451B-467F-ADD1-636DCB8B52F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{82F0F6AA-451B-467F-ADD1-636DCB8B52F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{82F0F6AA-451B-467F-ADD1-636DCB8B52F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{82F0F6AA-451B-467F-ADD1-636DCB8B52F6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{CCC2DAB6-E6CC-4D26-9779-CC27CE98D48A} = {7A340F41-0DB8-44C8-A0FA-E7C389AF975F}
 		{BC9E663E-8D24-42E8-AFFA-257AC1B0A5C7} = {7A340F41-0DB8-44C8-A0FA-E7C389AF975F}
 		{30118942-8BD9-4E4E-8942-143802D3BE6D} = {7A340F41-0DB8-44C8-A0FA-E7C389AF975F}
 		{94458D74-ECD6-4B8A-B803-544CC94B8D8F} = {7A340F41-0DB8-44C8-A0FA-E7C389AF975F}
+		{82F0F6AA-451B-467F-ADD1-636DCB8B52F6} = {DF4F0A8F-E4DE-4B2C-B063-C1B806EE92A5}
+		{DF4F0A8F-E4DE-4B2C-B063-C1B806EE92A5} = {7A340F41-0DB8-44C8-A0FA-E7C389AF975F}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8F026542-B6DF-426F-B80C-4FBFD73682D7}
 	EndGlobalSection
 EndGlobal

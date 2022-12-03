@@ -5,5 +5,6 @@ namespace Bordly.Domain.Param
     public class CreateGameParam : ICreateGameParam
     {
         public required string UserEmailAddress { get; init; }
+        public required string Name { get; init; }
     }
 }
