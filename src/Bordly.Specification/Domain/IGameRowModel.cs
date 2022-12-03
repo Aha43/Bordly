@@ -1,6 +1,6 @@
 ﻿namespace Bordly.Specification.Domain
 {
-    public interface IGameRow
+    public interface IGameRowModel
     {
         string Letters { get; }
         string Statuses { get; }
