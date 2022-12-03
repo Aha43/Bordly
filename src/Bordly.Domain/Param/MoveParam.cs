@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Bordly.Specification.Domain.Param;
 
 namespace Bordly.Domain.Param
 {
-    internal class MoveParam
+    public class MoveParam : IMoveParam
     {
+        public required string GameId { get; init; }
+        public required string Letters { get; init; }
     }
 }

@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Bordly.Specification.Domain;
 
 namespace Bordly.Domain
 {
-    internal class GameRowModel
+    public class GameRowModel : IGameRowModel
     {
+        public required string Letters { get; init; }
+        public required string Statuses { get; init; }
     }
 }
