@@ -1,4 +1,4 @@
-﻿namespace Bordly.Business.ViewModel
+﻿namespace Bordly.Business.ViewModelOld
 {
     public sealed class PlayerViewModel
     {

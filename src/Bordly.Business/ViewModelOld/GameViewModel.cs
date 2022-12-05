@@ -1,6 +1,6 @@
-﻿namespace Bordly.Business.ViewModel
+﻿namespace Bordly.Business.ViewModelOld
 {
-    public class Game
+    public class GameViewModel
     {
         public PlayerViewModel Player { get; }
 
@@ -8,8 +8,8 @@
 
         public IReadOnlyList<GameMoveViewModel> Movements { get; }
 
-        public Game(PlayerViewModel player, int moves, IEnumerable<GameMoveViewModel>? movements = null) 
-        { 
+        public GameViewModel(PlayerViewModel player, int moves, IEnumerable<GameMoveViewModel>? movements = null)
+        {
             if (moves < 3)
             {
                 throw new ArgumentException($"moves < 3 : {moves}");

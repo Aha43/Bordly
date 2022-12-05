@@ -16,7 +16,8 @@ public class InMemoryGameApi : IGameApi
         {
             Id = Guid.NewGuid().ToString(),
             UserEmailAddress = param.UserEmailAddress,
-            Name = param.Name
+            Name = param.Name,
+            Attempts = 9
         };
 
         _games[retVal.Id] = new Game 
