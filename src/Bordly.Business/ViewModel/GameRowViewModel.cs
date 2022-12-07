@@ -8,6 +8,6 @@ namespace Bordly.Business.ViewModel
 {
     public class GameRowViewModel
     {
-        public async Task
+        //public async Task
     }
 }
