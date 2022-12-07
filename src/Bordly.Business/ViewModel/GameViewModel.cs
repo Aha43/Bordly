@@ -9,8 +9,9 @@ namespace Bordly.Business.ViewModel
         public GameViewModel(IGameModel model) => _model = model;
 
         public string Name => _model.Name;
-
         public string Id => _model.Id;
+
+        public string Uri => $"game/{Id}";
 
     }
 
