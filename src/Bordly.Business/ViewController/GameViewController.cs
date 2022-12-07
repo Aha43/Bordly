@@ -23,6 +23,15 @@ namespace Bordly.Business.ViewController
             }
         }
 
+        public string? Move { get; set; }
+
+        public async Task MakeMoveAsync() => await MakeMoveAsync(default);
+        
+        public async Task MakeMoveAsync(CancellationToken cancellationToken)
+        {
+            //if ()
+        }
+
     }
 
 }
