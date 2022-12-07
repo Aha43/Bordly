@@ -1,11 +1,4 @@
-﻿using Bordly.Business.ViewModel;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Bordly.Business.ViewController
+﻿namespace Bordly.Business.ViewController
 {
     public class PlayerViewController
     {
@@ -17,8 +10,6 @@ namespace Bordly.Business.ViewController
         public string? Name { get; set; }
 
         public string Message { get; private set; } = string.Empty;
-
-        public bool PlayerLoggedIn => _viewModelFactory.Player != null;
 
         public async Task LoginAsync()
         {

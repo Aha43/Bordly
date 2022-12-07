@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Bordly.Business.ViewModel;
 
 namespace Bordly.Business.ViewController
 {
@@ -10,16 +6,20 @@ namespace Bordly.Business.ViewController
     {
         private readonly ViewModelFactory _viewModelFactory;
 
+        public GameViewModel? Game { get; private set; }
 
-        //public IEnumerable<> 
+        private List<GameRowViewModel> _rows = new();
+        public IEnumerable<GameRowViewModel> Rows => _rows.AsEnumerable();
 
         public GameViewController(ViewModelFactory viewModelFactory) => _viewModelFactory = viewModelFactory;
 
-        public async Task LoadAsync(CancellationToken cancellationToken = default)
+        public async Task LoadAsync(string gameId, CancellationToken cancellationToken = default)
         {
-            if (_viewModelFactory.Player != null)
+            if (_viewModelFactory.PlayerLoggedIn())
             {
-
+                var game = await _viewModelFactory.GetGameAsync(gameId, cancellationToken);
+                _rows = (await _viewModelFactory.GetGameRowsAsync(game, cancellationToken)).ToList();
+                Game = game;
             }
         }
 

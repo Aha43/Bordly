@@ -13,7 +13,7 @@ namespace Bordly.Business.ViewController
 
         public async Task LoadAsync()
         {
-            if (_viewModelFactory.Player != null)
+            if (_viewModelFactory.PlayerLoggedIn())
             {
                 _games = (await _viewModelFactory.GetGamesAsync()).ToList();
             }

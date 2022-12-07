@@ -1,13 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Bordly.Specification.Domain;
 
 namespace Bordly.Business.ViewModel
 {
     public class GameRowViewModel
     {
-        //public async Task
+        private readonly IGameRowModel _model;
+
+        public GameRowViewModel(IGameRowModel model) => _model = model;
+
+        public string Letters => _model.Letters;
+        public string Status => _model.Letters;
     }
 }

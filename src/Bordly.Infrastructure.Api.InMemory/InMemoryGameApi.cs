@@ -29,7 +29,17 @@ public class InMemoryGameApi : IGameApi
         return Task.FromResult(retVal as IGameModel);
     }
 
-    public Task<IEnumerable<IGameRowModel>> GetGameAsync(IGameParam param, CancellationToken cancellationToken = default)
+    public Task<IGameModel> GetGameAsync(IGameParam param, CancellationToken cancellationToken = default) 
+    {
+        if (_games.TryGetValue(param.GameId, out Game? game))
+        {
+            return Task.FromResult(game.GameModel);
+        }
+
+        throw new ArgumentException($"no game with id '{param.GameId}'");
+    }
+
+    public Task<IEnumerable<IGameRowModel>> GetGameRowsAsync(IGameParam param, CancellationToken cancellationToken = default)
     {
         if (_games.TryGetValue(param.GameId, out Game? game))
         {
@@ -58,7 +68,7 @@ public class InMemoryGameApi : IGameApi
             var sb = new StringBuilder();
             for (var i = 0; i < game.Word.Length; i++)
             {
-                if (Char.ToLower(param.Letters[i]) == game.Word[i])
+                if (char.ToLower(param.Letters[i]) == game.Word[i])
                 {
                     sb.Append('c');
                 }
@@ -72,7 +82,7 @@ public class InMemoryGameApi : IGameApi
                 }
             }
 
-            var retVal = new GameRowModel { Statuses= sb.ToString() };
+            var retVal = new GameRowModel { Statuses= sb.ToString(), Letters = param.Letters };
             game.RowModels.Add(retVal);
             return Task.FromResult(retVal as IGameRowModel);
         }

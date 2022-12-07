@@ -41,7 +41,7 @@ public class ApiTest
         var game = games.First();
 
         var param2 = new GameParam { GameId = game.Id };
-        var rows = await Api.GetGameAsync(param2);
+        var rows = await Api.GetGameRowsAsync(param2);
 
         rows.Should().BeEmpty();
     }
@@ -71,7 +71,7 @@ public class ApiTest
         var game = games.First();
 
         var param2 = new GameParam { GameId = game.Id };
-        var rows = await Api.GetGameAsync(param2);
+        var rows = await Api.GetGameRowsAsync(param2);
 
         rows.Should().HaveCount(1);
         
@@ -104,7 +104,7 @@ public class ApiTest
         var game = games.First();
 
         var param2 = new GameParam { GameId = game.Id };
-        var rows = await Api.GetGameAsync(param2);
+        var rows = await Api.GetGameRowsAsync(param2);
 
         rows.Should().HaveCount(2);
 
