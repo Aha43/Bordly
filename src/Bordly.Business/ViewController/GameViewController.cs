@@ -10,13 +10,17 @@ namespace Bordly.Business.ViewController
     {
         private readonly ViewModelFactory _viewModelFactory;
 
-        //public IEnumerable<>
+
+        //public IEnumerable<> 
 
         public GameViewController(ViewModelFactory viewModelFactory) => _viewModelFactory = viewModelFactory;
 
         public async Task LoadAsync(CancellationToken cancellationToken = default)
         {
+            if (_viewModelFactory.Player != null)
+            {
 
+            }
         }
 
     }
