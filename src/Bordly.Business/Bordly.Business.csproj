@@ -8,7 +8,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="7.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Bordly.Domain\Bordly.Domain.csproj" />
+    <ProjectReference Include="..\Bordly.Infrastructure.Api.InMemory\Bordly.Infrastructure.Api.InMemory.csproj" />
     <ProjectReference Include="..\Bordly.Specification\Bordly.Specification.csproj" />
   </ItemGroup>
 

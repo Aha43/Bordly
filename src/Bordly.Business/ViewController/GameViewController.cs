@@ -29,7 +29,11 @@ namespace Bordly.Business.ViewController
         
         public async Task MakeMoveAsync(CancellationToken cancellationToken)
         {
-            //if ()
+            if (Game != null && !string.IsNullOrEmpty(Move)) 
+            {
+                var row = await _viewModelFactory.MakeMove(Game, Move, cancellationToken);
+                _rows.Add(row);
+            }
         }
 
     }

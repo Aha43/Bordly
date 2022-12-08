@@ -80,6 +80,17 @@ namespace Bordly.Business
             return rows.Select(e => new GameRowViewModel(e));
         }
 
+        public async Task<GameRowViewModel> MakeMove(GameViewModel game, string word, CancellationToken cancellationToken = default)
+        {
+            var param = new MoveParam
+            {
+                GameId = game.Id,
+                Letters = word
+            };
+            var row = await _gameApi.PlayAsync(param, cancellationToken);
+            return new GameRowViewModel(row);
+        }
+
     }
 
 }

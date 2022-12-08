@@ -1,4 +1,6 @@
-﻿namespace Bordly.Business.ViewController
+﻿using Bordly.Business.ViewModel;
+
+namespace Bordly.Business.ViewController
 {
     public class PlayerViewController
     {
@@ -10,6 +12,8 @@
         public string? Name { get; set; }
 
         public string Message { get; private set; } = string.Empty;
+
+        public PlayerViewModel? Player { get; private set; } = null;
 
         public async Task LoginAsync()
         {
@@ -24,10 +28,14 @@
                 return;
             }
 
-            _ = await _viewModelFactory.LoginAsync(Email, Name);
+            Player = await _viewModelFactory.LoginAsync(Email, Name);
         }
 
-        public async Task LogoutAsync() => await _viewModelFactory.LogoutAsync();
+        public async Task LogoutAsync()
+        {
+            await _viewModelFactory.LogoutAsync();
+            Player = null;
+        }
 
     }
 

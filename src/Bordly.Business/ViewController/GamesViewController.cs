@@ -7,7 +7,7 @@ namespace Bordly.Business.ViewController
         private readonly ViewModelFactory _viewModelFactory;
 
         private List<GameViewModel> _games = new();
-        public IEnumerable<GameViewModel> Game => _games.AsEnumerable();
+        public IEnumerable<GameViewModel> Games => _games.AsEnumerable();
 
         public GamesViewController(ViewModelFactory viewModelFactory) => _viewModelFactory = viewModelFactory;
 
