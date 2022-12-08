@@ -1,0 +1,17 @@
+﻿@page "/game/{id}"
+
+<MudText Color="Color.Default" Typo="Typo.h3">@Controller.Game.Name</MudText>
+
+<MudStack>
+    <MudList>
+        @foreach (var row in Controller.Rows)
+        {
+            <MudListItem>
+                <MudText>@row.Letters</MudText>
+            </MudListItem>
+        }
+    </MudList>
+    <MudTextField @bind-Value="Controller.Move" Label="Attempt" Variant="Variant.Text"></MudTextField>
+    <MudButton OnClick="Controller.MakeMoveAsync">Play</MudButton>
+</MudStack>
+

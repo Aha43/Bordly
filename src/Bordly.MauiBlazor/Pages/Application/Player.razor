@@ -1,0 +1,11 @@
+﻿@page "/player"
+
+@using Bordly.MauiBlazor.Pages.Application.Components;
+
+<Avatar />
+
+<MudStack>
+    <MudTextField @bind-Value="Controller.Name" Label="Name" Variant="Variant.Text"></MudTextField>
+    <MudTextField @bind-Value="Controller.Email" Label="Email" Variant="Variant.Text"></MudTextField>
+    <MudButton OnClick="Controller.LoginAsync">Login</MudButton>
+</MudStack>

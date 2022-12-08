@@ -1,0 +1,25 @@
+﻿@page "/games"
+
+@using Bordly.MauiBlazor.Pages.Application.Components;
+
+@*<Avatar />*@
+
+@*<ul>
+    @foreach (var game in Controller.Games)
+    {
+        <li><text>allo</text></li>
+    }
+</ul>*@
+
+
+<MudStack>
+    <MudList>
+        @foreach (var game in Controller.Games)
+        {
+            @*<text>@game.Name</text>*@
+            <MudListItem>
+                <MudLink Color="Color.Default" Href="@game.Uri">@game.Name</MudLink>
+            </MudListItem>
+        }
+    </MudList>
+</MudStack>

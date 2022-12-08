@@ -17,7 +17,7 @@
 
         <!-- App Identifier -->
         <ApplicationId>com.companyname.bordly.mauiblazor</ApplicationId>
-        <ApplicationIdGuid>DD90B8EC-57EA-4A50-9AE1-CF3E6DBAB978</ApplicationIdGuid>
+        <ApplicationIdGuid>0494CAAE-CBBF-4220-843D-564274BAA57D</ApplicationIdGuid>
 
         <!-- Versions -->
         <ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
@@ -51,6 +51,15 @@
 
     <ItemGroup>
         <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="7.0.0" />
+        <PackageReference Include="MudBlazor" Version="6.1.4" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="wwwroot\css\" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Bordly.Business\Bordly.Business.csproj" />
     </ItemGroup>
 
 </Project>
