@@ -21,6 +21,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bordly.Blazor", "src\Bordly.Blazor\Bordly.Blazor.csproj", "{9E36D885-3098-485D-8752-4E3CE539D92C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bordly.MauiBlazor", "src\Bordly.MauiBlazor\Bordly.MauiBlazor.csproj", "{BBFE7B43-F9CB-40DF-AA7E-94EEF078A96D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,12 @@ Global
 		{9E36D885-3098-485D-8752-4E3CE539D92C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9E36D885-3098-485D-8752-4E3CE539D92C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9E36D885-3098-485D-8752-4E3CE539D92C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BBFE7B43-F9CB-40DF-AA7E-94EEF078A96D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BBFE7B43-F9CB-40DF-AA7E-94EEF078A96D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BBFE7B43-F9CB-40DF-AA7E-94EEF078A96D}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{BBFE7B43-F9CB-40DF-AA7E-94EEF078A96D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BBFE7B43-F9CB-40DF-AA7E-94EEF078A96D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BBFE7B43-F9CB-40DF-AA7E-94EEF078A96D}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -64,6 +72,7 @@ Global
 		{DF4F0A8F-E4DE-4B2C-B063-C1B806EE92A5} = {7A340F41-0DB8-44C8-A0FA-E7C389AF975F}
 		{C600C0DB-52CA-4918-94E0-5688AF4AF6A4} = {7A340F41-0DB8-44C8-A0FA-E7C389AF975F}
 		{9E36D885-3098-485D-8752-4E3CE539D92C} = {C600C0DB-52CA-4918-94E0-5688AF4AF6A4}
+		{BBFE7B43-F9CB-40DF-AA7E-94EEF078A96D} = {C600C0DB-52CA-4918-94E0-5688AF4AF6A4}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8F026542-B6DF-426F-B80C-4FBFD73682D7}
