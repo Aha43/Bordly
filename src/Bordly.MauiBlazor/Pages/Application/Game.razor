@@ -7,7 +7,25 @@
         @foreach (var row in Controller.Rows)
         {
             <MudListItem>
-                <MudText>@row.Letters</MudText>
+                <MudStack Row="true">
+                    @foreach (var l in row.GameRows)
+                    {
+                        <MudPaper>
+                            @if (l.Status == 'c')
+                            {
+                                <MudText Color="Color.Success">@l.Letter</MudText>
+                            }
+                            else if (l.Status == 'w')
+                            {
+                                <MudText Color="Color.Warning">@l.Letter</MudText>
+                            }
+                            else
+                            {
+                                <MudText Color="Color.Error">@l.Letter</MudText>
+                            }
+                        </MudPaper>
+                    }
+                </MudStack>
             </MudListItem>
         }
     </MudList>

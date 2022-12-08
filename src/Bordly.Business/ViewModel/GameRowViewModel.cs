@@ -6,9 +6,14 @@ namespace Bordly.Business.ViewModel
     {
         private readonly IGameRowModel _model;
 
-        public GameRowViewModel(IGameRowModel model) => _model = model;
+        public IEnumerable<GameRowLetterViewModel> GameRows { get; private set; }
 
-        public string Letters => _model.Letters;
-        public string Status => _model.Letters;
+        public GameRowViewModel(IGameRowModel model)
+        {
+            _model = model;
+            GameRows = _model.Letters.Select((e, i) => new GameRowLetterViewModel { Letter = e, Status = model.Statuses[i] });
+        }
+       
     }
+
 }
