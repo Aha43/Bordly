@@ -2,24 +2,26 @@
 
 @using Bordly.MauiBlazor.Pages.Application.Components;
 
-@*<Avatar />*@
+<MudPaper Class="pa-16 ma-2">
+    <MudStack>
+        <Avatar />
+        <MudList>
+                @foreach (var game in Controller.Games)
+                {
+                    <MudListItem>
+                        <MudLink Color="Color.Default" Href="@game.Uri">@game.Name</MudLink>
+                    </MudListItem>
+                }
+        </MudList>
+        <MudStack Row="true">
+            <MudTextField @bind-Value="Controller.NewGameName" />
+            <MudButton OnClick="Controller.CreateGameAsync">New Game</MudButton>
+        </MudStack>
+    </MudStack>
+</MudPaper>
 
-@*<ul>
-    @foreach (var game in Controller.Games)
-    {
-        <li><text>allo</text></li>
-    }
-</ul>*@
 
 
-<MudStack>
-    <MudList>
-        @foreach (var game in Controller.Games)
-        {
-            @*<text>@game.Name</text>*@
-            <MudListItem>
-                <MudLink Color="Color.Default" Href="@game.Uri">@game.Name</MudLink>
-            </MudListItem>
-        }
-    </MudList>
-</MudStack>
+
+
+

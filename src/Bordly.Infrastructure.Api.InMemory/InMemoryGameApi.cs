@@ -10,23 +10,6 @@ public class InMemoryGameApi : IGameApi
 {
     private readonly Dictionary<string, Game> _games = new();
 
-    public InMemoryGameApi()
-    {
-        var retVal = new GameModel
-        {
-            Id = Guid.NewGuid().ToString(),
-            UserEmailAddress = "arne.halvorsen@gmail.com",
-            Name = "Test Game",
-            Attempts = 9
-        };
-
-        _games[retVal.Id] = new Game
-        {
-            GameModel = retVal,
-            Word = "danse"
-        };
-    }
-
     public Task<IGameModel> CreateGameAsync(ICreateGameParam param, CancellationToken cancellationToken = default)
     {
         var retVal = new GameModel
