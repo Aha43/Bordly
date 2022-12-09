@@ -1,11 +1,7 @@
 ﻿@page "/player"
 
-@using Bordly.Razor.Components;
-
 <MudPaper Class="pa-16 ma-2">
     <MudStack>
-        <Avatar />
-
         <MudTextField @bind-Value="Controller.Name" Label="Name" Variant="Variant.Text" />
         <MudTextField @bind-Value="Controller.Email" Label="Email" Variant="Variant.Text" />
         <MudButton OnClick="Controller.LoginAsync">Login</MudButton>

@@ -1,7 +1,7 @@
 using Bordly.Business.ViewController;
 using Microsoft.AspNetCore.Components;
 
-namespace Bordly.Razor
+namespace Bordly.Razor.Areas.Bordly.Pages
 {
     public partial class Games
     {

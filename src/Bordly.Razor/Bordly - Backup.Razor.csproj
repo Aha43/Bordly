@@ -15,16 +15,6 @@
     <PackageReference Include="MudBlazor" Version="6.1.4" />
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\Bordly.Business\Bordly.Business.csproj" />
-  </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Areas\Bordly\Pages\Components\" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <SupportedPlatform Include="browser" />
-  </ItemGroup>
 
 </Project>
