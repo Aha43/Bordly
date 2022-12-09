@@ -1,0 +1,41 @@
+﻿@page "/game/{id}"
+
+@using Bordly.Razor.Components;
+
+<MudPaper Class="pa-16 ma-2">
+    <MudStack>
+        <Avatar />
+
+        <MudText Color="Color.Default" Typo="Typo.h3">@Controller.Game.Name</MudText>
+
+        <MudList>
+            @foreach (var row in Controller.Rows)
+            {
+                <MudListItem>
+                    <MudStack Row="true">
+                        @foreach (var l in row.GameRows)
+                        {
+                            <MudPaper>
+                                @if (l.Status == 'c')
+                                {
+                                    <MudText Color="Color.Success">@l.Letter</MudText>
+                                }
+                                else if (l.Status == 'w')
+                                {
+                                    <MudText Color="Color.Warning">@l.Letter</MudText>
+                                }
+                                else
+                                {
+                                    <MudText Color="Color.Error">@l.Letter</MudText>
+                                }
+                            </MudPaper>
+                        }
+                    </MudStack>
+                </MudListItem>
+            }
+        </MudList>
+        <MudTextField @bind-Value="Controller.Move" Label="Attempt" Variant="Variant.Text"></MudTextField>
+        <MudButton OnClick="Controller.MakeMoveAsync">Play</MudButton>
+    </MudStack>
+</MudPaper>
+
